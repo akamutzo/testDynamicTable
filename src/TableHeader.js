@@ -2,9 +2,6 @@ import React from "react";
 import "./App.css";
 
 export class TableHeader extends React.Component {
-  componentDidMount = () => {
-    console.log("NOW RENDERS TableHeader.JS");
-  };
   handleColumnHeaderClick = (key, data, order) => {
     const sortKey = key;
     let tableData = [];

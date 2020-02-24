@@ -6,9 +6,6 @@ import { actions } from "./Actions/actions";
 import { connect } from "react-redux";
 
 export class Table extends React.Component {
-  componentDidMount = () => {
-    console.log("NOW RENDERS TABLE.JS");
-  };
   render() {
     return (
       <div>
