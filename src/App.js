@@ -1,10 +1,13 @@
 import React from "react";
-import { TableConnect } from "./Table";
 import "./App.css";
 import { actions } from "./Actions/actions";
 import { connect } from "react-redux";
+import { TableConnect } from "./Table";
 
 export default class App extends React.Component {
+  componentDidMount = () => {
+    console.log("NOW RENDERS APP.JS");
+  };
   getData = () => {
     fetch(
       "https://raw.githubusercontent.com/blmzv/ah-frontend-intern/master/profiles.json"
@@ -33,8 +36,9 @@ export default class App extends React.Component {
         <button className="fetch-button" onClick={this.getData}>
           {"TAP here to fetch"}
         </button>
+
         {this.props.tableData.length > 0 ? (
-          <TableConnect data={this.props.tableData} />
+          <TableConnect  data={this.props.tableData} />
         ) : (
           " "
         )}
